@@ -76,7 +76,7 @@ Etching complete, all that was left was to finish up the pieces. First step was 
 
 And the finished product:
 
-![finished product](/img/2016/01/finished-product1.jpg)
+![finished product](/img/2016/01/finished-product.jpg)
 
 The finished product after etching, painting and sanding back
 
