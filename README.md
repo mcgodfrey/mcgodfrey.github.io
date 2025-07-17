@@ -1,2 +1,0 @@
-# mcgodfrey.github.io
-blog
