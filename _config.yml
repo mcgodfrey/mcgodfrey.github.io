@@ -9,8 +9,7 @@
 remote_theme: mmistakes/so-simple-theme
 skin: "/assets/css/skins/dark.css"
 locale: en-US
-name: 'Danger From Deer'  # this theme doesn't use name? it uses title instead?
-title: "Danger From Der"
+title: "Danger From Deer"
 description: 'The Deer... They are coming!'
 baseurl: / # the subpath of your site, e.g. "/blog"
 # url: 'https://dangerfromdeer.com'
