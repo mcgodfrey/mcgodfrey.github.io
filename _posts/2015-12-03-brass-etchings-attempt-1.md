@@ -11,7 +11,7 @@ categories:
 
 Cleaning out the garage I found/rediscovered some brass sheets which have been sitting there for quite a while, so my first thought was to attempt etching them to make some art. A quick internet search revealed two options, chemical acid etching or electrochemical etching. I decided on the electrochemical route because it seems safer (no nasty acids) and cooler (who doesn't love a battery with wires running to electrodes in a bath of blue water?). I'll start with a teaser photo of the results of this first attempt, and then go into some details.
 
-![finished](/img/2016/01/finished-product.jpg)
+{% include image.html url="/img/2016/01/finished-product.jpg" description="finished" %}
 
 The finished product after etching, painting and sanding back
 
@@ -26,7 +26,7 @@ First I cut some small rectangular pieces from the brass sheet roughly 5x10cm (t
 
 With the surfaces clean, it was time to add the mask. My first attempt used a permanent marker (sharpie brand) to draw my shape directly onto the brass. (Note that the drawings  in this post are of the Amber Gambler, the one-time logo of a beer we made who has now reached almost mythical status in its own right). As can be seen in the pictures, there wasn’t a very thick coverage. I tried waiting for it to dry and reapplied to try to make it thicker but without much success. As you’ll see later, the sharpie experiment was fairly unsuccessful, so I ended up re-cleaning and going over the original mask with some regular house paint.
 
-![masking](/img/2016/01/masks.png)
+{% include image.html url="/img/2016/01/masks.png" description="masking" %}
 
 Three masking techniques. (Top left) permanent “sharpie” marker, (top right) house paint, (bottom) paper mask with enamel spray paint (the paper was peeled off to expose the metal after the paint had dried)
 
@@ -34,7 +34,7 @@ For the second sample I decided to try a negative mask, ie. just etching the out
 
 For both samples I stripped the end of a ~20cm piece of multicore wire (apparently ~15A rated) , splayed the end and used electrical tape to stick it to the backside. I then covered the entire backside in electrical tape to prevent it from etching and to hold the wire in place. The other end of the wire was attached to my power supply, described below.
 
-![ready for etching](/img/2016/01/wires-attached.png)
+{% include image.html url="/img/2016/01/wires-attached.png" description="ready for etching" %}
 
 The piece is ready for etching with the wire taped to the backside
 
@@ -42,13 +42,13 @@ The piece is ready for etching with the wire taped to the backside
 
 Etching was performed in a plastic container~10x20cm and 10cm deep. Since the sample is brass, which is mostly copper (plus Zinc and a often a small amount of Lead), I used copper sulfate (CuSO4) as my electrolyte and a piece of copper pipe as my negative electrode. I picked up the Copper Sulfate from Bunnings for ~$10 for 500g. Apparently you can use a whole range of different salts for the electrolyte, including normal table salt according to some people. I decided to go with Copper Sulfate as it is cheap enough and it seemd like the safest route. Also, the electrolyte is not consumed so it can be reused almost indefinitely.
 
-![setup](/img/2016/01/solution-setup.png)
+{% include image.html url="/img/2016/01/solution-setup.png" description="setup" %}
 
 Shows the etch bath setup with copper sulfate solution. On the right is the solution resistance (~400Ohms) measured with a multimeter and the probes ~10mm apart. This was the lowest resistance I could achieve which I assume means that the solution was saturated.
 
 I filled the container with water and added CuSO4 a few tablespoons at a time, stirring to dissolve between each addition. After each addition I measured the resistance of the solution  over ~10mm by dipping the multimeter probes directly into the solution. It started up in the MOhm range and kept decreasing down to a few hundred ohms where it saturated. I figured that this meant I had saturated the solution so I stopped.
 
-![full setup](/img/2016/01/full-setup.png)
+{% include image.html url="/img/2016/01/full-setup.png" description="full setup" %}
 
 This shows the full setup. On the left is the battery charger and multimeters to monitor the current and voltage. The right shows how the electrodes are positioned in the bath
 
@@ -60,13 +60,13 @@ I initially started with the battery charger as the 2.5A maximum output meant th
 
 After about 20 minutes I removed the first sample (with the sharpie mask) to inspect it. There was a layer of brown material over the etched regions which came away very easily  in large sheets by rubbing it or just stirring it through the water. The material had etched slightly, but it was very shallow so I decided to move up to the battery. More problematic though, the sharpie mask was not doing a very good job at masking… The regions where the marker was visibly thinner had started etching and the marker had lifted up from the metal in some places. So, this prompted the move to the paint mask. I removed, cleaned and repainted the mask using regular house paint and continued etching.
 
-![first etch](/img/2016/01/first-etch.jpg)
+{% include image.html url="/img/2016/01/first-etch.jpg" description="first etch" %}
 
 After about 20 minutes of etching at 2.5A. Note the regions where the brass is showing through the green marker mask. This prompted a rethink and the new paint mask
 
 Things progressed much more quickly with the battery. I couldn’t get a good measurement of the current but I’m guessing somewhere in the order of 10A, although this changed depending on the electrode separation. With the battery I was getting pretty much the full unloaded voltage over the electrodes, with a slight drop when if I moved them very close together. I pulled out the sample and inspected it every 10 minutes or so and after about an hour I was fairly happy with the etch depth and moved on to the second sample. The paint mask was also starting to lift up in some places so it was time to stop the etch anyway. The second sample etched more quickly, presumably due to the smaller area which was being etched. It was finished in about 30 minutes.
 
-![after etch](/img/2016/01/finished-etching.jpg)
+{% include image.html url="/img/2016/01/finished-etching.jpg" description="after etch" %}
 
 The two pieces after etching. The etch depth is about 0.1mm for both. Note that there is not a lot of contrast between the etched and unetched regions, and this became worse after a thorough clean
 
@@ -76,7 +76,7 @@ Etching complete, all that was left was to finish up the pieces. First step was 
 
 And the finished product:
 
-![finished product](/img/2016/01/finished-product.jpg)
+{% include image.html url="/img/2016/01/finished-product.jpg" description="finished product" %}
 
 The finished product after etching, painting and sanding back
 

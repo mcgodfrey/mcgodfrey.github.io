@@ -12,11 +12,11 @@ We finished off the final section of the "long flat" paddock fence, which means 
 
 And in related news, Alan got a new bull! His name is "Bull".
 
-![Here is Bull](/img/2020/06/bull-1-1024x768.jpg)
+{% include image.html url="/img/2020/06/bull-1-1024x768.jpg" description="Here is Bull" %}
 
-![He seems quite inquisitive](/img/2020/06/bull-plus-alan-and-alex-1024x768.jpg)
+{% include image.html url="/img/2020/06/bull-plus-alan-and-alex-1024x768.jpg" description="He seems quite inquisitive" %}
 
-![And has a good work ethic. Straight to business as soon as he was released](/img/2020/06/bull-hard-at-work-fixed-600x380.png)
+{% include image.html url="/img/2020/06/bull-hard-at-work-fixed-600x380.png" description="And has a good work ethic. Straight to business as soon as he was released" %}
 
 ## Finishing the long flat fence
 
@@ -26,7 +26,7 @@ This probably actually sped up the process, as building a new fence from scratch
 We changed the fence line slightly to run down next to an old road, rather than running through the trees to make access easier. 
 This section is a few hundred meters long, running down the hill and around the corner to meet up with the original fence.
 
-{% include video.html code="hSq2_JM7Bfg?si=uF0bHuFRPUG2AWwU" title="New fence on the left of the long flat paddock" %}
+{% include youtube code="hSq2_JM7Bfg?si=uF0bHuFRPUG2AWwU"  %}
 
 ## Alpaca paddock fence
 
@@ -41,11 +41,11 @@ They were partially burned, but we managed to salvage enough long lengths to for
 But I think they look good, and definitely requires more thought and planning, which is good practice.
 We'll see what other wood we can salvage to use for fencing in the future.
 
-![New gate installed](/img/2020/06/alpaca-fence-selfie-1024x768.jpg)
+{% include image.html url="/img/2020/06/alpaca-fence-selfie-1024x768.jpg" description="New gate installed" %}
 
-![The new gate and section of fence separating a few of the alpaca paddocks](/img/2020/06/alpaca-fence-overview-1024x768.jpg)
+{% include image.html url="/img/2020/06/alpaca-fence-overview-1024x768.jpg" description="The new gate and section of fence separating a few of the alpaca paddocks" %}
 
-![Detailed view of the gate post. The post, and bracing posts were collected from scrap recovered around the farm](/img/2020/06/alpaca-fence-gate-post-detail-1024x768.jpg)
+{% include image.html url="/img/2020/06/alpaca-fence-gate-post-detail-1024x768.jpg" description="Detailed view of the gate post. The post, and bracing posts were collected from scrap recovered around the farm" %}
 
-![Alex in the newly-enclosed paddock](/img/2020/06/alpaca-fence-finished-with-alex-1024x768.jpg)
+{% include image.html url="/img/2020/06/alpaca-fence-finished-with-alex-1024x768.jpg" description="Alex in the newly-enclosed paddock" %}
 

@@ -45,7 +45,7 @@ This is very different to my initial expectations of just joining up basic shape
 
 All of the magic happens in the sketch. This is where you draw a 2D shape with can then later be extruded/revolved/whatever into 3D. The sketch plane can be placed in any direction, or attached to another surface so that everything is aligned. It is quite easy to sketch shapes with all the basics  objects including lines, rectangles, circles, splines, etc. However the real power comes from the ability to add dimensions and other constraints to the sketch to parameterise it.
 
-![Example of a sketch created with Fusion 360. This is a case for the controller board and temperature controller for my Printrbot 3d printer, described below](/img/2016/01/sketch_example1.png)
+{% include image.html url="/img/2016/01/sketch_example1.png" description="Example of a sketch created with Fusion 360. This is a case for the controller board and temperature controller for my Printrbot 3d printer, described below" %}
 
 Dimensions are fairly straightforward and can be added to any objects, lines circles, etc. They can be changed later and the objects will resize automatically as expected. Nothing unexpected here.
 
@@ -62,13 +62,13 @@ Once the sketch is complete, you can start extruding and building up in 3d. In a
 
 An example of a simple part I designed is a mount to hold the controller board and an additional temperature controller board for my Printrbot. Normally this is mounted underneath the printer body, but I have enclosed my printer in a heated box up to reduce warping while printing. Keeping the board inside a heated box seemed like a bad idea, so it needed somewhere to live outside.
 
-![Completed model in Fusion 360, ready for export and printing](/img/2016/01/printer_enclosure_model.png)
+{% include image.html url="/img/2016/01/printer_enclosure_model.png" description="Completed model in Fusion 360, ready for export and printing" %}
 
 The final model and the actual printed part are shown above. The design is fairly simple, and roughly based on some similar parts I found on Thingiverse, but none of them really fit the bill exactly. I also wanted to design an additional mount for the temperature controller and switch which would attach to the main part. Ideally I would have designed a single part to hold both, but I am constrained by the 150x150x150mm build volume of the Printrbot.
 
 This design is fairly simple and everything is extruded from a single sketch. I started with the main board, defining the outline of the base, the walls around the edge (with cut-outs for connectors and wires) and the mounting posts (I decided to use posts which stick through the mounting holes on the board, rather than using screws). I also added some circular cut-outs in the middle of the base to reduce the printing time and material usage. Finally, the locking mechanism for the second board was added to the right. Leaving the sketch, all the areas were then selected and extruded.
 
-![Photo of the printed part with the boards installed](/img/2016/01/printer_enclosure_printed.jpg)
+{% include image.html url="/img/2016/01/printer_enclosure_printed.jpg" description="Photo of the printed part with the boards installed" %}
 
 The second board was created with exactly the same process. The locking mechanism was a bit tricky and required 2 prints to get right. The issue was with printing tolerances, rather than with the design process. In the end I needed to build in larger tolerances to get everything to fit together nicely.
 

@@ -18,13 +18,13 @@ Where this all gets interesting is in the yeast. Because our last attempt at sou
 
 The first 4 weeks I went with a bucket fermentation. My motivation here was to replicate a feature of fermentation in oak barrels by using the slightly porous plastic bucket. The result of this experiment was quite disgusting!
 
-![](/img/2016/01/img_5573.jpg)
+{% include image.html url="/img/2016/01/img_5573.jpg" description="" %}
 
 This is the pellicle, which the brett forms to stop oxygen reaching the beer. Eventually, it collapsed and sank into the fermenter, and a few days after this, I switched the sour to the demijohns for some extended souring and maturing, for about 2-3months.
 
 The resulting brew was initially disappointing, with a harsh and not particularly nice flavour on the back of the palate. However, a few more weeks of the brett doing its funky thing, and it had become really quite delicious, with a really big acetic acid quality, and some wonderfully fruity elements.
 
-![](/img/2016/01/img_5868.jpg)
+{% include image.html url="/img/2016/01/img_5868.jpg" description="" %}
 
 Of course,  this isn’t the end of the illustrious tale of the sour beer. It had a final trick to play!
 

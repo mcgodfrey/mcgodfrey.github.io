@@ -13,7 +13,7 @@ In this post I'll go over my steps to get an STM32F4xx microcontroller running F
 
 This post will focus on the SPI setup and configuration steps using STM32CubeMX, rather than the whole system design and communication protocol (that will be a future post). The final application will have a raspberry pi controller talking over as shared SPI bus to a number of STM32F412 devices, each running FreeRTOS. For the purposes of this post however, I will use a raspberry pi connected to a single STM32F4 discovery board (which has an STM32F407 MCU on it, which for the purposes of this post behaves identically).
 
-![Raspberry pi to STM32F4 discovery board test setup. Note the 4-wires forming the SPI bus between the two (plus a ground wire which is not strictly necessary because the USB connected to both forms a ground reference already)](/img/2020/11/stm32f4-spi-device-setup-1024x651.jpg)
+{% include image.html url="/img/2020/11/stm32f4-spi-device-setup-1024x651.jpg" description="Raspberry pi to STM32F4 discovery board test setup. Note the 4-wires forming the SPI bus between the two (plus a ground wire which is not strictly necessary because the USB connected to both forms a ground reference already)" %}
 
 I will be using STM32CubeMX to generate the code for the startup and system initialisation, as well as the HAL for the GPIO and the SPI/DMA peripherals. This tool actually seems to work reasonably well, especially for getting a project up and running quickly without having to read through all the documentation to even get the thing to start. It may not be optimised, but it is a decent starting point. The code it generates is scattered with start/end user code comment blocks. If you are careful put all of your own user code between these blocks, then you can freely go back and update the project in CubeMX and re-generate the outputs and it will keep all of your code, which makes it easy to change peripheral configurations and test the results.
 
@@ -46,20 +46,20 @@ Start by creating a new project using the MCU selector - search for and choose t
             - Click "Add" button and select `SPI1_RX` from the dropdown
             - Click "Add" button again and select `SPI1_TX` from the dropdown
 - Select System Core -> SYS
-    - Timebase Source: TIM6 - *<span class="has-inline-color has-dark-gray-color">FreeRTOS uses the systick timer, so we need to choose a different timer for the HAL to use. Any of the timers will do, but timer 6 is a "basic timer" so it is a good one to use for this - you are unlikely to miss it.</span>*
+    - Timebase Source: TIM6 - *FreeRTOS uses the systick timer, so we need to choose a different timer for the HAL to use. Any of the timers will do, but timer 6 is a "basic timer" so it is a good one to use for this - you are unlikely to miss it.*
 - Select System Core -&gt; NVIC
     - NVIC tab
-        - Change the preemption priority of "DMA2 stream0 global interrupt" and "DMA2 stream2 global interrupt" to 5 - *<span class="has-inline-color has-dark-gray-color">This is required so that we can call FreeRTOS system functions from inside the interrupt handler. By default the system interrupts have the highest possible priority (0), but in order to call FreeRTOS functions (to wake a thread for example) the priority must be lower than the FreeRTOS priority (which is defined in FreeRTOSConfig.h). See <https://www.freertos.org/RTOS-Cortex-M3-M4.html></span>*
-        - Make sure that the "priority group" is set to "4 bits for pre-emption priority". *<span class="has-inline-color has-dark-gray-color">FreeRTOS recommends having all priority bits allocated to pre-emption, rather than sun-priorities. See <https://www.freertos.org/RTOS-Cortex-M3-M4.html></span>*
+        - Change the preemption priority of "DMA2 stream0 global interrupt" and "DMA2 stream2 global interrupt" to 5 - *This is required so that we can call FreeRTOS system functions from inside the interrupt handler. By default the system interrupts have the highest possible priority (0), but in order to call FreeRTOS functions (to wake a thread for example) the priority must be lower than the FreeRTOS priority (which is defined in FreeRTOSConfig.h). See <https://www.freertos.org/RTOS-Cortex-M3-M4.html>*
+        - Make sure that the "priority group" is set to "4 bits for pre-emption priority". *FreeRTOS recommends having all priority bits allocated to pre-emption, rather than sun-priorities. See <https://www.freertos.org/RTOS-Cortex-M3-M4.html>*
     
     
     - Code generation tab
-        - Deselect "Generate IRQ handler" for "System service call via SWI instruction", "Pendable request for system service" and "System tick timer" - *<span class="has-inline-color has-dark-gray-color">FreeRTOS defines its own handlers for these, and if CubeMX also generates handler functions then the linker will throw an error about multiple definitions.</span>*
+        - Deselect "Generate IRQ handler" for "System service call via SWI instruction", "Pendable request for system service" and "System tick timer" - *FreeRTOS defines its own handlers for these, and if CubeMX also generates handler functions then the linker will throw an error about multiple definitions.*
 - In the pinout diagram
     - Click on any pins you would like to use as outputs (LED indicator for example) and select `GPIO_Output`. I set up the 4 user LEDs on teh discovery board (PD12-PD15)
     - Under System Core -&gt; GPIO select the pin and change the "User Label" to something useful, eg. `LED_GREEN`.
 
-![Final CubeMX setup with SPI and interrupts set up, plus 4 LED outputs defined.](/img/2020/11/CubeMX-screen-3-1024x490.png)
+{% include image.html url="/img/2020/11/CubeMX-screen-3-1024x490.png" description="Final CubeMX setup with SPI and interrupts set up, plus 4 LED outputs defined." %}
 
 ### Clock configuration tab
 

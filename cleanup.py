@@ -11,7 +11,7 @@ def copy_header_images(filename: str, src: str, dst: str):
 
             # copy header images
             if line.startswith("image: /img/"):
-                image = line[12:]
+                image = line[12:].strip()
                 print(f"Copying image: {image}")
                 sourcefile = os.path.join(src, image)
                 dstfile = os.path.join(dst, image)

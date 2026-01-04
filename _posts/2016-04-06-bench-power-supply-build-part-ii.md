@@ -20,9 +20,9 @@ After building and testing the first version of the board I discovered a couple 
 
 This post will go through some of the problems encountered in the first revision of the board and the changes that have been made to this one. I will save a full writeup of the build, the enclosure and some testing for a future post. A description of the operation of the power supply can be found on the Circuitmaker project page [here](http://circuitmaker.com/Projects/F48BC6C2-9005-48B8-87CD-C89CD40F70DC).
 
-![New board](/img/2016/04/power-supply-board-rev-1-1-front.jpg)
+{% include image.html url="/img/2016/04/power-supply-board-rev-1-1-front.jpg" description="New board" %}
 
-![ New schematic ](/img/2016/04/rev1-1-schematic.png)
+{% include image.html url="/img/2016/04/rev1-1-schematic.png" description=" New schematic " %}
 
 ## Changes in Rev.1.1
 
@@ -42,7 +42,7 @@ First up, the major changes in Rev.1.1:
 
 On the original board the current limiting never worked with the INA196 current monitor chip (U2) always outputting zero volts. My guess is that the the chip was blown due to an overvoltage on its power pin. This was caused by a separate problem where this power rail (nominally ~12V) reached up to ~35V, well above the 18V rating of the INA196.
 
-![Schematic of the feedback and output circuits](/img/2016/04/feedback-schematic-768x424.png)
+{% include image.html url="/img/2016/04/feedback-schematic-768x424.png" description="Schematic of the feedback and output circuits" %}
 
 This power rail on the original board was unregulated and taken directly from the 9VAC transformer winding, full fridge rectified and filtered which should have given ~12VDC. However, it measured ~0.6V underneath the VCC voltage (either ~18V or 35V depending on the transformer tap). I am still not entirely sure of the cause of this problem but it is pretty clear that there was a diode somewhere pulling the rail up to VCC. I suspect one of the chips blew, but I can’t figure out where. On the new board I have added a 9V regulator (U4) to prevent this from happening. This is better practice in general anyway, since this rail is used for all the analog feedback circuitry so it is best to have it regulated.
 
@@ -58,9 +58,9 @@ Some brief testing without this cap on the new board didn’t show oscillation (
 
 Embarrassingly, I got the physical board size and mounting hole positions wrong in my original layout. I wanted to use existing mounting holes on my heatsink, but I made the board too long. Also, I realised that the PCB manufacture is cheaper for boards less than 100x100mm so I changed the shape from 120x60mm to 100x73mm in the new revision.
 
-![New board](/img/2016/04/power-supply-board-rev-1-1-front.jpg)
+{% include image.html url="/img/2016/04/power-supply-board-rev-1-1-front.jpg" description="New board" %}
 
-![Old board](/img/2016/01/pcb-photo-top1.jpg)
+{% include image.html url="/img/2016/01/pcb-photo-top1.jpg" description="Old board" %}
 
 
 
@@ -68,7 +68,7 @@ This necessitated a complete re-layout and repositioning of all the components. 
 
 I also added some via stitching to all of the high current traces to increase the current handling capability. Each of the vias should be able to handle about 2-3A, so I have added 3 to each trace, rather than the original 1 just to be safe. This turned out to be harder than expected to do in Circuitmaker – there is probably a simple way, but I didn’t find it. I had trouble with tracks and vias disappearing as I tried to add additional vias.  Apart from this minor complaint however, I’m still very impressed with Circuitmaker and recommend people give it a try.
 
-![Via stitching on high current traces](/img/2016/04/via-stitching.png)
+{% include image.html url="/img/2016/04/via-stitching.png" description="Via stitching on high current traces" %}
 
 Finally, I added a jumper (J1) to the current limiting path so that it can be disabled easily for testing. This was actually already useful in debugging the problem with (another!) blown current monitor chip when I built this circuit up.
 
@@ -76,7 +76,7 @@ Finally, I added a jumper (J1) to the current limiting path so that it can be di
 
 I added some labeling to the input and output terminals on the silkscreen. I also changed the amber gambler logo into a font, as described in [this](http://circuitmaker.com/blog#Blogs/pcb-layers-part-7-metal) blog post. This makes it simpler to re-size and add to new designs.
 
-![The Amber Gambler logo is now saved as a font, making re-sizing and reuse simpler](/img/2016/04/img_20160330_2133541-768x535.jpg)
+{% include image.html url="/img/2016/04/img_20160330_2133541-768x535.jpg" description="The Amber Gambler logo is now saved as a font, making re-sizing and reuse simpler" %}
 
 ## Summary and next steps
 
@@ -84,10 +84,10 @@ The board has gone through some simple electrical testing and seems to be workin
 
 The enclose us mostly complete with the transformer, PCB, heatsink, mains input and front panel items all installed. It just needs a top for the box, a coat of paint or lacquer and some knobs for the pots to finish it off.
 
-![](/img/2016/04/img_20160330_212101-1024x768.jpg)
-![](/img/2016/04/img_20160330_202048-1024x768.jpg)
-![](/img/2016/04/img_20160330_212044-1024x768.jpg)
-![](/img/2016/04/front-panel-1024x610.png)
+{% include image.html url="/img/2016/04/img_20160330_212101-1024x768.jpg" description="" %}
+{% include image.html url="/img/2016/04/img_20160330_202048-1024x768.jpg" description="" %}
+{% include image.html url="/img/2016/04/img_20160330_212044-1024x768.jpg" description="" %}
+{% include image.html url="/img/2016/04/front-panel-1024x610.png" description="" %}
 
 ## Further improvements/modifications:
 
@@ -97,7 +97,7 @@ The enclose us mostly complete with the transformer, PCB, heatsink, mains input 
 - Replace the Arduino with just the AVR microcontroller. I can still install the Arduino bootloader on the chip, but there is no need for the full Arduino board on there – it was just a convenience.
 - Investigate current handling capability of the thermal reliefs for ground pads on high current pins – they seem very thin...
 
-![Schematic of the feedback and output circuits](/img/2016/04/ground-tabs-300x107.png)
+{% include image.html url="/img/2016/04/ground-tabs-300x107.png" description="Schematic of the feedback and output circuits" %}
 
 - Simulate the feedback loop to determine phase margin and stability
 - Add some test points and additional jumper/0 Ohm resistors to the board for easier debugging

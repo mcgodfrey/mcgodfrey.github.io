@@ -19,7 +19,7 @@ We'd already been through the day before with the tractor and pulled out the old
 - Installing some brackets to actually hang the gate on,
 - And installing a latch chain on the opposing post to lock the gate up to
 
-{% include video.html code="WBR-nGv0dNU" title="embed" %}
+{% include youtube code="WBR-nGv0dNU" %}
 
 As you can see, the first gate went in with no problems (except the camera falling over...). For the second one we ran out of gate swing kits, and so couldn't finish it. We went back the following day after picking one up and finished it off.
 
