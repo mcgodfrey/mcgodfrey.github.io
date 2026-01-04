@@ -28,8 +28,6 @@ This section is a few hundred meters long, running down the hill and around the 
 
 {% include video.html code="hSq2_JM7Bfg?si=uF0bHuFRPUG2AWwU" title="New fence on the left of the long flat paddock" %}
 
-{% include responsive-embed url="https://www.youtube.com/watch?v=hSq2_JM7Bfg" ratio="16:9" %}
-
 ## Alpaca paddock fence
 
 We also re-did a section of fencing on the alpaca paddocks.
