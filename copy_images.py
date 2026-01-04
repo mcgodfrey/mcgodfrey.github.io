@@ -22,4 +22,4 @@ def run(filename: str, src: str, dst: str):
 
 
 if __name__ == "__main__":
-    run("_posts/2021-07-23-building-a-wooden-cabinet.md", "../static", "img")
+    run("_posts/2020-11-17-setting-up-an-stm32f4-as-an-spi-device-with-freertos-and-stm32mxcube.md", "../static", "img")

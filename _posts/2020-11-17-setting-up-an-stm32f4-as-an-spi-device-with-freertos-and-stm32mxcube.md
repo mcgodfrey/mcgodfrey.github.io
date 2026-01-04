@@ -1,10 +1,8 @@
 ---
-id: 1174
 title: 'Setting up an STM32F4 as an SPI device with FreeRTOS and STM32MXCube'
 date: '2020-11-17T06:03:53+00:00'
 author: matt
 layout: post
-guid: 'https://dangerfromdeer.com/?p=1174'
 permalink: /2020/11/17/setting-up-an-stm32f4-as-an-spi-device-with-freertos-and-stm32mxcube/
 image: /wp-content/uploads/2020/11/CubeMX-screen-3-880x660.png
 categories:
@@ -15,9 +13,11 @@ In this post I'll go over my steps to get an STM32F4xx microcontroller running F
 
 This post will focus on the SPI setup and configuration steps using STM32CubeMX, rather than the whole system design and communication protocol (that will be a future post). The final application will have a raspberry pi controller talking over as shared SPI bus to a number of STM32F412 devices, each running FreeRTOS. For the purposes of this post however, I will use a raspberry pi connected to a single STM32F4 discovery board (which has an STM32F407 MCU on it, which for the purposes of this post behaves identically).
 
-<figure class="wp-block-image size-large">![](https://dangerfromdeer.com/wp-content/uploads/2020/11/stm32f4-spi-device-setup-1024x651.jpg)<figcaption>Raspberry pi to STM32F4 discovery board test setup. Note the 4-wires forming the SPI bus between the two (plus a ground wire which is not strictly necessary because the USB connected to both forms a ground reference already)</figcaption></figure>I will be using STM32CubeMX to generate the code for the startup and system initialisation, as well as the HAL for the GPIO and the SPI/DMA peripherals. This tool actually seems to work reasonably well, especially for getting a project up and running quickly without having to read through all the documentation to even get the thing to start. It may not be optimised, but it is a decent starting point. The code it generates is scattered with start/end user code comment blocks. If you are careful put all of your own user code between these blocks, then you can freely go back and update the project in CubeMX and re-generate the outputs and it will keep all of your code, which makes it easy to change peripheral configurations and test the results.
+![Raspberry pi to STM32F4 discovery board test setup. Note the 4-wires forming the SPI bus between the two (plus a ground wire which is not strictly necessary because the USB connected to both forms a ground reference already)](/img/2020/11/stm32f4-spi-device-setup-1024x651.jpg)
 
-The really nice part is that it can generate code compatible with GCC, including a startup and linker script, and a makefile. This is refreshing, as most other tools try to lock you in to one of the proprietary IDE/compiler ecosystems. (As a side note, this blog series (<https://vivonomicon.com/2018/04/02/bare-metal-stm32-programming-part-1-hello-arm/> has a really nice rundown of "bare metal" programming stm32 devices, starting from the startup script, linker, all the way up to compiling c code and running it)
+I will be using STM32CubeMX to generate the code for the startup and system initialisation, as well as the HAL for the GPIO and the SPI/DMA peripherals. This tool actually seems to work reasonably well, especially for getting a project up and running quickly without having to read through all the documentation to even get the thing to start. It may not be optimised, but it is a decent starting point. The code it generates is scattered with start/end user code comment blocks. If you are careful put all of your own user code between these blocks, then you can freely go back and update the project in CubeMX and re-generate the outputs and it will keep all of your code, which makes it easy to change peripheral configurations and test the results.
+
+The really nice part is that it can generate code compatible with GCC, including a startup and linker script, and a makefile. This is refreshing, as most other tools try to lock you in to one of the proprietary IDE/compiler ecosystems. (As a side note, this blog series <https://vivonomicon.com/2018/04/02/bare-metal-stm32-programming-part-1-hello-arm/> has a really nice rundown of "bare metal" programming stm32 devices, starting from the startup script, linker, all the way up to compiling c code and running it)
 
 I won't go over the details of how to set up the build environment in this post, but here is the setup I use:
 
@@ -37,17 +37,15 @@ Start by creating a new project using the MCU selector - search for and choose t
 
 ### Pinout and configuration tab
 
-- Select Connectivity -&gt; SPI1
+- Select Connectivity -> SPI1
     - In the "Mode" section at the top select
         - Mode: "Full Duplex Slave"
         - Hardware NSS Signal: "Hardware NSS Input Signal
-    
-    
     - In the "Configuration" section at the bottom select
         - DMA settings tab
-            - Click "Add" button and select SPI1\_RX from the dropdown
-            - Click "Add" button again and select SPI1\_TX from the dropdown
-- Select System Core -&gt; SYS
+            - Click "Add" button and select `SPI1_RX` from the dropdown
+            - Click "Add" button again and select `SPI1_TX` from the dropdown
+- Select System Core -> SYS
     - Timebase Source: TIM6 - *<span class="has-inline-color has-dark-gray-color">FreeRTOS uses the systick timer, so we need to choose a different timer for the HAL to use. Any of the timers will do, but timer 6 is a "basic timer" so it is a good one to use for this - you are unlikely to miss it.</span>*
 - Select System Core -&gt; NVIC
     - NVIC tab
@@ -58,10 +56,12 @@ Start by creating a new project using the MCU selector - search for and choose t
     - Code generation tab
         - Deselect "Generate IRQ handler" for "System service call via SWI instruction", "Pendable request for system service" and "System tick timer" - *<span class="has-inline-color has-dark-gray-color">FreeRTOS defines its own handlers for these, and if CubeMX also generates handler functions then the linker will throw an error about multiple definitions.</span>*
 - In the pinout diagram
-    - Click on any pins you would like to use as outputs (LED indicator for example) and select GPIO\_Output. I set up the 4 user LEDs on teh discovery board (PD12-PD15)
-    - Under System Core -&gt; GPIO select the pin and change the "User Label" to something useful, eg. LED\_GREEN.
+    - Click on any pins you would like to use as outputs (LED indicator for example) and select `GPIO_Output`. I set up the 4 user LEDs on teh discovery board (PD12-PD15)
+    - Under System Core -&gt; GPIO select the pin and change the "User Label" to something useful, eg. `LED_GREEN`.
 
-<figure class="wp-block-image size-large">![](https://dangerfromdeer.com/wp-content/uploads/2020/11/CubeMX-screen-3-1024x490.png)<figcaption>Final CubeMX setup with SPI and interrupts set up, plus 4 LED outputs defined.</figcaption></figure>### Clock configuration tab
+![Final CubeMX setup with SPI and interrupts set up, plus 4 LED outputs defined.](/img/2020/11/CubeMX-screen-3-1024x490.png)
+
+### Clock configuration tab
 
 - Change HCLK (MHz) to whatever you like. This example project used 100MHz. This is not particularly important unless you intend to run the SPI bus at very high speeds.
 
@@ -70,10 +70,11 @@ Start by creating a new project using the MCU selector - search for and choose t
 - In the project tab on the left:
     - enter a project name. eg. stm32f4-spi-device
     - choose a location on disk to save the project
-    - Application structure. Choose either basic or advanced. <span class="has-inline-color has-dark-gray-color">*Advanced creates a few additional directories to separate the auto-generated code from the user code. I used basic for this project. Note. Once you generate the code the first time you can't change this again without restarting the project.*</span>
+    - Application structure. Choose either basic or advanced. *Advanced creates a few additional directories to separate the auto-generated code from the user code. I used basic for this project. Note. Once you generate the code the first time you can't change this again without restarting the project.*
     - Toolchain / IDE: Makefile
 - In the code generator tab on the left:
-    - Optionally select "Generate peripheral initialization as a pair of .c/.h files per peripheral<span class="has-inline-color has-dark-gray-color"> *- I like this as it separates the code into smaller logical files. But, this is optional.*</span>
+    - Optionally select "Generate peripheral initialization as a pair of .c/.h files per peripheral
+      - *I like this as it separates the code into smaller logical files. But, this is optional.*
 
 Click on "Generate Code" to finish.
 
@@ -81,17 +82,17 @@ Click on "Generate Code" to finish.
 
 ### FreeRTOS
 
-CubeMX has the option of adding FreeRTOS to your project for you (under middlware-&gt;FREERTOS). However, it wraps it in another os abstraction layer with very little documentation - I prefer to just use FreeRTOS directly. To do this:
+CubeMX has the option of adding FreeRTOS to your project for you (under middlware->FREERTOS). However, it wraps it in another os abstraction layer with very little documentation - I prefer to just use FreeRTOS directly. To do this:
 
 - Download FreeRTOS from <https://www.freertos.org/>
-- Copy the FreeRTOS/source directory to the project directory under "Drivers" 
+- Copy the FreeRTOS/source directory to the project directory under `Drivers` 
     - You only need the list.c, tasks.c, queue.c and timers.c files. You can delete the others if you wish.
-    - In the "portable" directory, you only need to keep the "MemMang" and "GCC/ARM\_MCF4" directories - you can delete all the others.
-- Create a FreeRTOSConfig.h file in your /inc directory. Use the one in the linked repository as a starting point.
+    - In the `portable` directory, you only need to keep the `MemMang` and `GCC_ARM_MCF4` directories - you can delete all the others.
+- Create a `FreeRTOSConfig.h` file in your `/inc` directory. Use the one in the linked repository as a starting point.
 
 ### Makefile
 
-Next we need to add the FreeRTOS sources to the makefile. Under the C\_SOURCES section, add the FreeRTOS source files, as well as a comms.c file which we'll add later
+Next we need to add the FreeRTOS sources to the makefile. Under the `C_SOURCES` section, add the FreeRTOS source files, as well as a `comms.c` file which we'll add later
 
 ```
 Drivers/FreeRTOS/Source/list.c \
@@ -103,7 +104,7 @@ Drivers/FreeRTOS/Source/portable/MemMang/heap_4.c \
 Src/comms.c
 ```
 
-Under the C\_INCLUDES add the FreeRTOS include directories
+Under the `C_INCLUDES` add the FreeRTOS include directories
 
 ```
 -IDrivers/FreeRTOS/Source/include \
@@ -175,9 +176,9 @@ int main(void){
 
 Note:
 
-- <span style="font-size: 1.125rem;">The priority of the comms task is higher than the "blinky" task</span>. This means that it can respond quickly to communications, but should yield as quickly as possible to avoid blocking the main thread.
-- A lot of the auto-generated code has been excluded, as well as the blinky\_task() implementation - see the link above for the full code.
-- The auto-generated while() loop is empty, since the call to vTaskStartScheduler() blocks, so it never makes it to the main while loop.
+- **The priority of the comms task is higher than the "blinky" task**. This means that it can respond quickly to communications, but should yield as quickly as possible to avoid blocking the main thread.
+- A lot of the auto-generated code has been excluded, as well as the `blinky_task()` implementation - see the link above for the full code.
+- The auto-generated while() loop is empty, since the call to `vTaskStartScheduler()` blocks, so it never makes it to the main while loop.
 
 #### comms.\[hc\]
 
@@ -188,7 +189,7 @@ The code below should be fairly self explanitory. After defining the tx/rx/store
 - Puts the status byte and message length into the start of the tx buffer
 - Starts a 2-byte DMA transfer for the command packet
 - "takes" the notification and goes to sleep
-- Once the transfer is complete, the interrupt handler callback (HAL\_SPI\_TxRxCpltCallback) "gives" it a notification which wakes it up
+- Once the transfer is complete, the interrupt handler callback (`HAL_SPI_TxRxCpltCallback`) "gives" it a notification which wakes it up
 - It inspects the command and decides whether to write its stored message (ie. put it in the tx buffer) or read in a new message from the controller (ie. save the rx buffer into the stored message buffer).
 - It then sets up a second DMA transfer of the correct length
 - And "takes" the notification again.
@@ -250,15 +251,15 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi){
 
 Notes:
 
-- The callback name, HAL\_SPI\_TxRxCpltCallback, must match exactly - this is required by FreeRTOS in order to call the callback. Alternatively, this code could probably go directly in the ISR, which is defined in stm32f4xx\_it.c in either DMA2\_Stream0\_IRQHandler() or DMA2\_Stream2\_IRQHandler(). But, I think putting it in the callback is cleaner.
+- The callback name, `HAL_SPI_TxRxCpltCallback`, must match exactly - this is required by FreeRTOS in order to call the callback. Alternatively, this code could probably go directly in the ISR, which is defined in `stm32f4xx_it.c` in either `DMA2_Stream0_IRQHandler()` or `DMA2_Stream2_IRQHandler()`. But, I think putting it in the callback is cleaner.
 - There is no error handling at the moment. 
-    - The status in hal\_status should be checked before going to sleep, to make sure the SPI/DMA is ready
-    - The thread probably shouldn't sleep forever (portMAX\_DELAY). Instead, it should probably wake periodically to make sure there are no problems.
+    - The status in hal_status should be checked before going to sleep, to make sure the SPI/DMA is ready
+    - The thread probably shouldn't sleep forever (`portMAX_DELAY`). Instead, it should probably wake periodically to make sure there are no problems.
 - The total time that this thread is awake is very small - it just wakes for long enough to read/write the new data into the tx/rx buffers, trigger a new transfer and then go back to sleep. In a real application, handling the commands from the controller might involve manipulating some internal state, or triggering actions in the main thread, etc. But, the idea is similar, and should always return as quickly as possible to avoid blocking the main thread.
 
 ## Testing
 
-To test the code, there is a python script in the repository called stm32\_spi\_test.py. To run it, connect the SPI lines and run the script as `python3 stm32_spi_test.py`.
+To test the code, there is a python script in the repository called `stm32_spi_test.py`. To run it, connect the SPI lines and run the script as `python3 stm32_spi_test.py`.
 
 The script does an initial read of the device string, then writes to it and reads the result back. Output below:
 
@@ -283,4 +284,4 @@ The basic setup is working, showing how to set up an SPI DMA transfer in device-
 - CRC
     - There should be a CRC byte appended to the end of each message to check for any transmission errors. This would also require a robust way for the device or controller to signal to the other in case of a CRC mismatch, and to resend the data, or move to some other defined state. The STM32 devices support automatic CRC generation/checks but I haven't tested this yet.
 - Timing edge cases
-    - What happens if the controller initiates the &lt;data packet&gt; transfer before the device is ready (before it has called the DMA transfer start)? This could happen for example if the controller is too fast, or if the device takes some time to read a certain register. Or if another higher priority interrupt delays it temporarily. There should be a mechanism for the controller to poll if the device is ready. The controller probably reads all 0 if the device doesn't respond - so, the status byte would be 0 which indicates busy. The controller could then retry the transfer.
+    - What happens if the controller initiates the \<data packet\> transfer before the device is ready (before it has called the DMA transfer start)? This could happen for example if the controller is too fast, or if the device takes some time to read a certain register. Or if another higher priority interrupt delays it temporarily. There should be a mechanism for the controller to poll if the device is ready. The controller probably reads all 0 if the device doesn't respond - so, the status byte would be 0 which indicates busy. The controller could then retry the transfer.
