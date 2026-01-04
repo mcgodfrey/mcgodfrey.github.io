@@ -4,7 +4,7 @@ date: '2016-03-26T02:40:43+00:00'
 author: matt
 layout: post
 permalink: /2016/03/26/temperature-logger/
-image: /wp-content/uploads/2016/03/img_20160326_102847-1200x900.jpg
+image: /img/2016/03/img_20160326_102847-1200x900.jpg
 categories:
     - Homebrewing
     - Projects
@@ -42,8 +42,8 @@ And the completed enclosure!
 
 ![](/img/2016/03/img_20160326_102847.jpg)
 ![](/img/2016/03/img_20160326_102829.jpg)
-![](/img/2016/03/26/img_20160326_102834.jpg)
-![](/img/2016/03/26/img_20160326_102839.jpg)
+![](/img/2016/03/img_20160326_102834.jpg)
+![](/img/2016/03/img_20160326_102839.jpg)
 
 ## Code
 
