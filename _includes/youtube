@@ -1,1 +1,0 @@
-{% include responsive-embed url="https://www.youtube-nocookie.com/embed/{{include.code}}" %}

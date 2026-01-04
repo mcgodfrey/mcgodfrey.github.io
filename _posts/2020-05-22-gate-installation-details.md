@@ -14,4 +14,4 @@ The posts serve a dual-purpose of swinging the gate, as well as acting as tensio
 
 The installation is relatively simple, as there is a whole system for these metal fences/gates. The posts are all standard sizes, and you buy the adapters for the bracing posts and gate swing kits which all connect together in a modular way. Slightly more expensive than using wooden poles, but significantly quicker.
 
-{% include youtube code="fu3EJjSAdcM" %}
+{% include youtube.html code="fu3EJjSAdcM" %}

@@ -14,7 +14,7 @@ You can see in the image the remains of the old stockyard. This area used to be 
 
 The first job was to clean up all the loose wood and wire lying around. Then a new temporary metal/wire fence was installed to keep the alpacas in while the stockyard fences were removed and replaced. Then the tractor could come in to rip out all the burned posts and carry off all the large pieces of wood. This was our first real attempt at driving the tractor and manipulating the bucket on the front. There are a lot of degrees of freedom to deal with, but a lot of fun, and I think we're getting better at it. Much more practice needed though.
 
-{% include youtube code="8HUoPR64nII" %}
+{% include youtube.html code="8HUoPR64nII" %}
 
 The yard is now mostly cleared and ready for the next steps which are:
 
