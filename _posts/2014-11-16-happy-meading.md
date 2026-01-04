@@ -47,7 +47,7 @@ Comparison: The darker honey in mead No. 2 results in a much deeper colour. Flav
 ![Science bitches! Measuring the gravity.](/img/2014/11/img_20141115_1534051.jpg)
 
 ![Yeasties!!!](/img/2014/11/img_20141115_153555.jpg)
-
+<>
 We used a single 8g packet of SN9 wine yeast split between the 2 batches. It was rehydrated in some warm water and some premium harvest wine nutrient.
 
 ![](/img/2014/11/img_20141115_150826.jpg)

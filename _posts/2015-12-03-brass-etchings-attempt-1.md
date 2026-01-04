@@ -4,7 +4,7 @@ date: '2015-12-03T23:06:10+00:00'
 author: matt
 layout: post
 permalink: /2015/12/03/brass-etchings-attempt-1/
-image: /wp-content/uploads/2016/01/finished-product1-e1588213139607.jpg
+image: /img/2016/01/finished-product1-e1588213139607.jpg
 categories:
     - Projects
 ---

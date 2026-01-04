@@ -4,7 +4,7 @@ date: '2016-01-01T04:48:21+00:00'
 author: matt
 layout: post
 permalink: /2016/01/01/bench-power-supply-build-part-1/
-image: /wp-content/uploads/2016/01/pcb-photo-top1-1200x594.jpg
+image: /img/2016/01/pcb-photo-top1-1200x594.jpg
 categories:
     - Projects
 tags:

@@ -4,7 +4,7 @@ date: '2020-11-17T06:03:53+00:00'
 author: matt
 layout: post
 permalink: /2020/11/17/setting-up-an-stm32f4-as-an-spi-device-with-freertos-and-stm32mxcube/
-image: /wp-content/uploads/2020/11/CubeMX-screen-3-880x660.png
+image: /img/2020/11/CubeMX-screen-3-880x660.png
 categories:
     - Projects
 ---

@@ -4,7 +4,7 @@ date: '2015-04-09T22:56:47+00:00'
 author: leumasllewdalb
 layout: post
 permalink: /2015/04/09/sour-power/
-image: /wp-content/uploads/2016/01/image-2048x1536-1-1200x900.jpg
+image: /img/2016/01/image-2048x1536-1-1200x900.jpg
 categories:
     - Homebrewing
 ---
