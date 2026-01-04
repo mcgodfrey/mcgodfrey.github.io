@@ -9,7 +9,7 @@ categories:
     - Projects
 ---
 
-This post is part of my series on building a kinetic sculpture with the Mojo FPGA development board. (Part1 [Part2](http://dangerfromdeer.com/2016/03/06/servo-motor-control-with-mojo-fpga-board/)).
+This post is part of my series on building a kinetic sculpture with the Mojo FPGA development board. (Part1 [Part2](/2016/03/06/servo-motor-control-with-mojo-fpga-board/)).
 
 Back at uni I did a course on digital logic design ([COMP3222](http://www.handbook.unsw.edu.au/undergraduate/courses/2013/COMP3222.html) for anyone interested) and really enjoyed it - it was one of my favourite classes.
 But for some reason I never followed up on it or did any more. I think part of the reason is the relatively large cost and complexity of FPGAs compared with microcontrollers. Anyone can buy an Arduino for a few dollars and get started pretty much immediately. Not so for an FPGA. In order to pick up where I left of at uni I’ve ordered myself a [mojo board](https://embeddedmicro.com/products/mojo-v3.html) and plan to start getting back into some FPGA development.
@@ -32,4 +32,4 @@ That’s all for now. I’ll be back with an update when I get some code written
 
 ### Update (9/1/2013): 
 
-Project code is now up on github. This is very much the development code (read. it doesn’t work) and will be updated as I go.
+Project code is now up on [github](https://github.com/mcgodfrey/kinetic_sculpture). This is very much the development code (read. it doesn’t work) and will be updated as I go.

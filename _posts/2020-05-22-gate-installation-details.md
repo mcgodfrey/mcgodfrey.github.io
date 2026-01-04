@@ -4,6 +4,7 @@ date: '2020-05-22T02:40:27+00:00'
 author: matt
 layout: post
 permalink: /2020/05/22/gate-installation-details/
+image: /img/2020/05/long-flat-gate-hanging-detail-thumbnail-e1590115085759-845x660.png
 categories:
     - Farm
 ---

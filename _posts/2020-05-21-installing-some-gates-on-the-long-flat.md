@@ -4,6 +4,7 @@ date: '2020-05-21T13:17:17+00:00'
 author: matt
 layout: post
 permalink: /2020/05/21/installing-some-gates-on-the-long-flat/
+image: /img/2020/05/long-flat-gates-finished-thumbnail-880x660.png
 categories:
     - Farm
 ---

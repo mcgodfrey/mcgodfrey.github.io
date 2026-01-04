@@ -13,10 +13,10 @@ tags:
     - Verilog
 ---
 
-This post is part of my series on building a kinetic sculpture with the Mojo FPGA development board. ([Part1](http://dangerfromdeer.com/2016/01/09/mojo-fpga-development-board/) Part2).
+This post is part of my series on building a kinetic sculpture with the Mojo FPGA development board. ([Part1](/2016/01/09/mojo-fpga-development-board/) Part2).
 
 My [Mojo development board ](https://embeddedmicro.com/products/mojo-v3.html) finally turned up and so I've been playing around with it for the last week. 
-This post is just a quick update of some fist test code to control some servo motors and sweep them back and forth. The end goal of this project is full independent control of multiple servos to create moving sculptures. See [this ](http://dangerfromdeer.com/2016/01/09/mojo-fpga-development-board/) post for an overview of the project. 
+This post is just a quick update of some fist test code to control some servo motors and sweep them back and forth. The end goal of this project is full independent control of multiple servos to create moving sculptures. See [this](/2016/01/09/mojo-fpga-development-board/) post for an overview of the project. 
 
 For this first stage, I want to simply sweep a few sevos back and forth through their full range at different speeds. I will be using Verilog for the project (since all of the Mojo example code is written in Verilog) and the [mojo-base-project](https://github.com/embmicro/mojo-base-project) as a starting point. There are also some [tutorials](https://embeddedmicro.com/tutorials/mojo) and example code on the Mojo website for counters and servo control which I have based a lot of this code on.
 

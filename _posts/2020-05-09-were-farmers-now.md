@@ -4,6 +4,7 @@ date: '2020-05-09T13:27:04+00:00'
 author: matt
 layout: post
 permalink: /2020/05/09/were-farmers-now/
+image: /img/2020/05/fence-installed-1-1024x768.jpg
 categories:
     - Farm
 ---

@@ -4,6 +4,7 @@ date: '2020-06-03T05:01:19+00:00'
 author: matt
 layout: post
 permalink: /2020/06/03/more-fences-and-a-new-arrival/
+image: /img/2020/06/IMG_20200527_163310435-long-flat-fence-cover-880x660.jpg
 categories:
     - Farm
 ---

@@ -4,6 +4,7 @@ date: '2016-03-20T06:23:35+00:00'
 author: matt
 layout: post
 image: /img/2016/03/img_20160320_1716181-1200x786.jpg
+permalink: /2016/03/20/designing-a-3d-printed-electronics-enclosure/
 categories:
     - Projects
 tags:

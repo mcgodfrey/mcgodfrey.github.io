@@ -4,6 +4,7 @@ date: '2020-05-17T13:07:04+00:00'
 author: matt
 layout: post
 permalink: /2020/05/17/stockyard-cleanup-timelapse/
+image: /img/2020/05/stockyard-before-880x660.jpg
 categories:
     - Farm
 ---
