@@ -19,7 +19,7 @@ I've been dabbling in woodworking over the last few months and designed this cab
 
 The body is composed of 2 frame and panel pieces on either side, with simple rails running across the front and the back to tie them together. Mortise and tenon joints are used throughout, and the panels in the sides are tongue and grooved and floating in the side frames. The base of the shelf is made of solid pine laminated into a board. The legs are 2 laminated 19mm thick pieces to be roughly 38x38mm.
 
-{% image url="/img/2021/07/frame-1-1024x768.jpg" description="Cutting mortises in the frame legs" %}
+{% include image.html url="/img/2021/07/frame-1-1024x768.jpg" description="Cutting mortises in the frame legs" %}
 
 
 ![](/img/2021/07/frame-2-1024x768.jpg)
