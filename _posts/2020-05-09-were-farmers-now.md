@@ -22,5 +22,3 @@ The first task was rebuilding a short section of fence and hanging a gate betwee
 ![Gate hung](http://dangerfromdeer.com/wp-content/uploads/2020/05/gate-hung-1.jpg)
 
 ![Final result](http://dangerfromdeer.com/wp-content/uploads/2020/05/fence-installed-1.jpg)
-
-</figure>
