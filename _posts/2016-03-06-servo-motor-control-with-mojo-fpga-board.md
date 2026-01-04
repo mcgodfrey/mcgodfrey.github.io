@@ -20,7 +20,7 @@ This post is just a quick update of some fist test code to control some servo mo
 
 For this first stage, I want to simply sweep a few sevos back and forth through their full range at different speeds. I will be using Verilog for the project (since all of the Mojo example code is written in Verilog) and the [mojo-base-project](https://github.com/embmicro/mojo-base-project) as a starting point. There are also some [tutorials](https://embeddedmicro.com/tutorials/mojo) and example code on the Mojo website for counters and servo control which I have based a lot of this code on.
 
-{% include image.html url="/img/2016/03/servo_motor_demo.gif" description="Demo servo motor control with Mojo FPGA board." %}
+![Demo servo motor control with Mojo FPGA board.](/img/2016/03/servo_motor_demo.gif)
 
 So, jumping straight in, download the code [here](https://github.com/mcgodfrey/kinetic_sculpture/releases/tag/v0.1) and I’ll go through how it works below.
 

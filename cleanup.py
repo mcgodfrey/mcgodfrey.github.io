@@ -11,7 +11,7 @@ def copy_header_images(filename: str, src: str, dst: str):
 
             # copy header images
             if line.startswith("image: /img/"):
-                image = line[12:].strip()
+                image = line[12:]
                 print(f"Copying image: {image}")
                 sourcefile = os.path.join(src, image)
                 dstfile = os.path.join(dst, image)
@@ -20,7 +20,7 @@ def copy_header_images(filename: str, src: str, dst: str):
                     os.makedirs(os.path.dirname(dstfile), exist_ok=True)
                     shutil.copyfile(sourcefile, dstfile)
                 else:
-                    print(f"  error: missing source file: <{sourcefile}>")
+                    print(f"  error: missing source file: {sourcefile}")
 
             # translate images to have captions
             line = re.sub(

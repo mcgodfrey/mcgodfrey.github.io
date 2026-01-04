@@ -17,7 +17,7 @@ After a few months in storage (10/10/2014 – 04/04/2015) fermenting away, they 
 
 The first step was working out how to get our mead from demijohn to bottle. As it turns out, the standard siphon didn’t fit in the top of the demijohns. Some careful consideration, and we ended up going with the more traditional – suck on it until a siphon forms and then disinfect and hope for the best – technique. It worked with only a small amount of mess, and the first mead, our light number, ended up safe in bottles to be know as ‘Honey, I mead you…”.
 
-{% include image.html url="/img/2016/01/image-3.jpg" description="Bottle of mead 1 done! Note that the golden liquid is not mead, but rather the sterilising solution." %}
+![Bottle of mead 1 done! Note that the golden liquid is not mead, but rather the sterilising solution.](/img/2016/01/image-3.jpg)
 
 Some testing of wares convinced us that it needed a little longer. No doubt about it, it tastes like mead. But it also has an unpleasant ‘young wine’ kind of flavour, that hopefully will disappear with age. We also ran some test to determine the alcohol content – which we estimate to be about 14%. A little more than intended, but who is going to complain about getting a little more sloshed? Hopefully there isn’t enough sugar left to cause any bottle bombs, but we’ll check in a month to make sure.
 

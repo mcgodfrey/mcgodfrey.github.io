@@ -13,12 +13,12 @@ The latest project is helping out on the farm, repairing and rebuilding after th
 The first task was rebuilding a short section of fence and hanging a gate between the stockyard and one of the paddocks. This small section is needed before we can get the cattle into the stockyard for health checks, etc. A simple start, but there'll be more to come soon.
 
 
-{% include image.html url="http://dangerfromdeer.com/wp-content/uploads/2020/05/digging-a-hole-1.jpg" description="Digging a hole" %}
+![Digging a hole](http://dangerfromdeer.com/wp-content/uploads/2020/05/digging-a-hole-1.jpg)
 
-{% include image.html url="http://dangerfromdeer.com/wp-content/uploads/2020/05/still-digging-a-hole-1.jpg" description="Cleaning up the hole" %}
+![Cleaning up the hole](http://dangerfromdeer.com/wp-content/uploads/2020/05/still-digging-a-hole-1.jpg)
 
-{% include image.html url="http://dangerfromdeer.com/wp-content/uploads/2020/05/post-installed-1.jpg" description="Post installed" %}
+![Post installed](http://dangerfromdeer.com/wp-content/uploads/2020/05/post-installed-1.jpg)
 
-{% include image.html url="http://dangerfromdeer.com/wp-content/uploads/2020/05/gate-hung-1.jpg" description="Gate hung" %}
+![Gate hung](http://dangerfromdeer.com/wp-content/uploads/2020/05/gate-hung-1.jpg)
 
-{% include image.html url="http://dangerfromdeer.com/wp-content/uploads/2020/05/fence-installed-1.jpg" description="Final result" %}
+![Final result](http://dangerfromdeer.com/wp-content/uploads/2020/05/fence-installed-1.jpg)

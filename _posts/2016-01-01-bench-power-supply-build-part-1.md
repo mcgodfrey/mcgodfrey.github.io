@@ -37,13 +37,13 @@ Searching online I found a few good references which I have based my design on. 
 
 The design is fairly simple and uses a single npn Darlington transistor Q3 ([TIP120](https://www.fairchildsemi.com/datasheets/TI/TIP120.pdf)) as the pass transistor. It is in a common collector configuration and so provides current gain but no voltage gain. Voltage gain is provided by Q1 which is a common emitter configuration. The output voltage is divided down to a 0-5V signal by resistors R4 and R5 to provide the voltage feedback to opamp U2A ([LM358](http://www.ti.com/lit/ds/symlink/lm158-n.pdf)), and U1 ([INA196](http://www.ti.com/product/ina196)) is a current monitor chip which measures the voltage over shunt resistor R3 to provide the current feedback. There is additional circuitry for the mains rectification, the transformer tap select, fixed 5V output and auxiliary power supplies for the different chips.
 
-{% include image.html url="/img/2016/01/schematic.png" description="Full power supply schematic" %}
+![Full power supply schematic](/img/2016/01/schematic.png)
 
 ## Voltage control
 
 The main feedback loop is shown below. Opamp U2A has it’s non-inverting input connected to the wiper of a pot on the front panel, driven by a 5V reference signal which provides the setpoint between 0V and 5V. The inverting input comes from the 6:1 voltage divider R4/R5 which also gives a voltage in the range of 0-5V. The output voltage is amplified by the common emitter amplifier created by R1, R2 and Q1, with the pnp transisor Q2 required as the common emitter amplifier is inverting. The current gain is then provided by Q3.
 
-{% include image.html url="/img/2016/01/feedback.png" description="Schematic of main amplifier and feedback portion" %}
+![Schematic of main amplifier and feedback portion](/img/2016/01/feedback.png)
 
 The operation is as follows:
 
@@ -85,13 +85,13 @@ Display is handled by an Arduino nano, which measures the setpoint and actual vo
 
 This is the first PCB that I’ve properly laid out so it was very much a learning experience. My major concern was that I don’t have a reference for how important different best-practices are – how much of a problem long winding traces are, how close feedback resistors need to be to the opamp, how wide to make tracks, etc. I think in hindsight I worried about this too much, I feel like it is a fairly simple board that is going to be fairly tolerant to sub-optimal layout. I think I also prolonged the process by trying to fit everything into a relatively small area. The board width was determined by the heatsink I had available (~120mm) and I set the depth at 60mm when in reality there is a lot of spare room in my enclosure.
 
-{% include image.html url="/img/2016/01/pcb-layout1.png" description="PCB layout. Board size is 123mm x 60mm" %}
+![PCB layout. Board size is 123mm x 60mm](/img/2016/01/pcb-layout1.png)
 
 ## Manufacture
 
 I had my boards manufactured by [PCBWay](http://www.pcbway.com/) which I found after a bit of a search online. It is a Chinese company which was very cheap (US$22 + shipping for 5 2 layer boards) and had some good reviews online. The turnaround time was amazingly fast – less than a week between submitting the order and delivery for the standard/cheap shipping option.
 
-{% include image.html url="/img/2016/01/pcb-photo-top1.jpg" description="Photo of the top side of the PCB" %}
+![Photo of the top side of the PCB](/img/2016/01/pcb-photo-top1.jpg)
 
 The board quality looks good (to my untrained eyes anyway) and there are no manufacturing problems that I have been able to identify yet. I’ve since found a few small issues with my design and one of the footprints is missing a pad, but these are fixable and I’ll go through them in the next post.
 

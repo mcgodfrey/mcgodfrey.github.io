@@ -11,7 +11,7 @@ categories:
 
 So I’ve been going through a nostalgia period with my brewing, and this week it was time to make another go of my Sichuan Saison. Last time, I’d used a White Labs yeast (no. 565). This time round I decided to keep it simple with a Wyeast Belle Saison packet. There were a few other changes I decided to make, here and there. One was the addition of Candy sugar, to make it have a little more kick. Another was the use of a Light malt, rather than a pilsener malt extract, lending it a little more body.
 
-{% include image.html url="/img/2016/03/img_6336.jpg" description="" %}
+![](/img/2016/03/img_6336.jpg)
 
 The main point of this exercise however concerned the secret (or not so secret) ingredient – Sichuan pepper corns. Last time I’d been disappointed about the lack of kick in the Beer from the Sichuan pepper, even though it was delicious, and I was left wondering – how much do I need to add? Too much, and I run the risk of creating a diabolically numbing and  spicy beer that few will drink, too little and it will be another let down.
 
@@ -29,4 +29,4 @@ All of the brewing went smoothly until the addition of the sichuan pepper, where
 
 Finally I added the yeast. Since it was a dry packet, I’m not sure what the story will be in terms of flavours, but hopefully the saison elements will compliment the sichuan pepper well.
 
-{% include image.html url="/img/2016/03/img_6330.jpg" description="" %}
+![](/img/2016/03/img_6330.jpg)
