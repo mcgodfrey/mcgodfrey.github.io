@@ -1,12 +1,9 @@
 ---
-id: 1111
-title: 'Installing some gates on the &#8220;long flat&#8221;'
+title: 'Installing some gates on the "long flat"'
 date: '2020-05-21T13:17:17+00:00'
 author: matt
 layout: post
-guid: 'http://dangerfromdeer.com/?p=1111'
 permalink: /2020/05/21/installing-some-gates-on-the-long-flat/
-image: /wp-content/uploads/2020/05/long-flat-gates-finished-thumbnail-880x660.png
 categories:
     - Farm
 ---
@@ -22,6 +19,8 @@ We'd already been through the day before with the tractor and pulled out the old
 - Installing some brackets to actually hang the gate on,
 - And installing a latch chain on the opposing post to lock the gate up to
 
-<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://youtu.be/WBR-nGv0dNU </div></figure>As you can see, the first gate went in with no problems (except the camera falling over...). For the second one we ran out of gate swing kits, and so couldn't finish it. We went back the following day after picking one up and finished it off.
+{% include video.html code="WBR-nGv0dNU" title="embed" %}
+
+As you can see, the first gate went in with no problems (except the camera falling over...). For the second one we ran out of gate swing kits, and so couldn't finish it. We went back the following day after picking one up and finished it off.
 
 With the entrance gates finished, all that is left is the hundreds of meters of fencing around the perimeter of the paddock to repair... That will be the topic of the next post.

@@ -1,12 +1,9 @@
 ---
-id: 1106
 title: 'Stockyard cleanup &#8211; timelapse'
 date: '2020-05-17T13:07:04+00:00'
 author: matt
 layout: post
-guid: 'http://dangerfromdeer.com/?p=1106'
 permalink: /2020/05/17/stockyard-cleanup-timelapse/
-image: /wp-content/uploads/2020/05/stockyard-before-880x660.jpg
 categories:
     - Farm
 ---
@@ -17,7 +14,9 @@ You can see in the image the remains of the old stockyard. This area used to be 
 
 The first job was to clean up all the loose wood and wire lying around. Then a new temporary metal/wire fence was installed to keep the alpacas in while the stockyard fences were removed and replaced. Then the tractor could come in to rip out all the burned posts and carry off all the large pieces of wood. This was our first real attempt at driving the tractor and manipulating the bucket on the front. There are a lot of degrees of freedom to deal with, but a lot of fun, and I think we're getting better at it. Much more practice needed though.
 
-<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://youtu.be/8HUoPR64nII </div></figure>The yard is now mostly cleared and ready for the next steps which are:
+{% include video.html code="8HUoPR64nII" title="embed" %}
+
+The yard is now mostly cleared and ready for the next steps which are:
 
 - Leveling the ground a bit so that the new fences will install nicely and meet up, and
 - Actually installing the new fences. They have been delivered and are just waiting to be put up.

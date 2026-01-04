@@ -26,7 +26,8 @@ This probably actually sped up the process, as building a new fence from scratch
 We changed the fence line slightly to run down next to an old road, rather than running through the trees to make access easier. 
 This section is a few hundred meters long, running down the hill and around the corner to meet up with the original fence.
 
-{% include video.html code="hSq2_JM7Bfg" title="New fence on the left of the long flat paddock" %}
+{% include video.html code="hSq2_JM7Bfg?si=uF0bHuFRPUG2AWwU" title="New fence on the left of the long flat paddock" %}
+
 
 ## Alpaca paddock fence
 

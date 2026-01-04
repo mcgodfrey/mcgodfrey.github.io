@@ -1,9 +1,13 @@
+import sys
 import os
 import re
 import shutil
 
 
 def run(filename: str, src: str, dst: str):
+
+    if not os.path.exists(filename):
+        raise FileNotFoundError(f"Missing file {filename}")
     with open(filename, "r") as f:
         md = f.readlines()
 
@@ -12,9 +16,10 @@ def run(filename: str, src: str, dst: str):
     print('updating links and figures')
     for line in md:
         # update links from absolute to relative paths
-        if '](http://dangerfromdeer.com/wp-content/uploads/' in line:
+        if ('](http://dangerfromdeer.com/wp-content/uploads/' in line) or ('](https://dangerfromdeer.com/wp-content/uploads/' in line):
             old_line = line
-            line.replace('](http://dangerfromdeer.com/wp-content/uploads/', '](/img/')
+            line = line.replace('](http://dangerfromdeer.com/wp-content/uploads/', '](/img/')
+            line = line.replace('](https://dangerfromdeer.com/wp-content/uploads/', '](/img/')
             print(f"Updating image link: \n  {old_line}\n  {line}")
 
             #remove width query param
@@ -29,6 +34,16 @@ def run(filename: str, src: str, dst: str):
             old_line = line
             line = f'{m.group(1)}![{m.group(3)}]({m.group(2)}){m.group(4)}\n'
             print(f"Updating image format: \n  {old_line}\n  {line}")
+
+        # youtube embeds
+        if 'https://youtu.be' in line:
+            old_line = line
+            line = re.sub(
+                r'<figure.*><div.*> *https://youtu.be/([-a-zA-Z0-9]*) *</div></figure>',
+                '{% include video.html code="\\1" title="embed" %}',
+                line,
+            )
+            print(f"Updating youtube reference: \n  {old_line}\n  {line}")            
 
         updated.append(line)
 
@@ -54,4 +69,5 @@ def run(filename: str, src: str, dst: str):
 
 
 if __name__ == "__main__":
-    run("_posts/2020-06-03-more-fences-and-a-new-arrival.md", "../static", "img")
+    filename = sys.argv[1]
+    run(filename, "../static", "img")
