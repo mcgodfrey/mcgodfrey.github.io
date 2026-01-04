@@ -76,7 +76,7 @@ A few things to note about the design. Wherever possible I exploit symmetry and 
 
 Once everything is designed, you simply right click on the bodies and select export as .stl which can then be sent directly to the printer software (I use cura) for printing.
 
- 
+
 
 ## Conclusions
 
