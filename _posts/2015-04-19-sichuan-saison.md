@@ -15,13 +15,13 @@ Inspiration was provided by a trip to a Sichuan eatery for a deliciously spicy l
 
 Now all that remained was to decide what kind of beer would suit a hint of sichuan in it. I went with a Saison, since the spiciness of the yeast should be complimented by the floral spiciness of the Sichuan pepper. Hopefully it will also get just enough of the weird element of the sichuan pepper to make the beer a little weird. For hops, I wanted something that would add additional spicy qualities, rather than big fruit notes, so something more noble that new world seemed the bill.
 
-![](/img/2016/01/img_5264.jpg)
+{% include image.html url="/img/2016/01/img_5264.jpg" description="" %}
 
 
 
 The final selection was Sichuan Pepper, White Labs 565 Saison Yeast, Ella Hops, and a tin of Pilsener malt extract (1.7kg). The boil was 60 mins in total, and I wound up with ~10L at the end, though I had to top it up with water at about 20mins to go. I added 8g of Ella at 30 minutes, with the remaining 20 grams added just before flame out (~ 1 minute). I went with more hops for this than is probably wise, but I have heard good things about Ella, so hopefully it doesn’t go too wrong. And if it does – well, obviously my semiconscious mind was manifesting repressed desires for IPA…
 
-![](/img/2016/01/img_5271.jpg)
+{% include image.html url="/img/2016/01/img_5271.jpg" description="" %}
 
 Finally, the sichuan pepper – 10g – I added it at 10 minutes to go. I judged this from coriander, but it may turn out to be too much, or too little. If it works out as intended, at most, there will be a clear hint of the sichuan pepper. If not, well, next time, 20g.
 

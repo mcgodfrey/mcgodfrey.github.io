@@ -14,7 +14,7 @@ Naturally, it couldn't be anything normal, but rather something novel and untrie
 We ended up settling on favourite of ours - sour beer! For those who don't know, sour beer is a style of beer that is (as the name suggests) sour. 
 Some examples of this are Lambics, Gueze, and what the Yanks call 'Wild Ales'. For an added bit of funkiness, we decided that we'd also use a Saison-ish yeast, which should add some additional funky flavours.
 
-![Crazy sour juice! Only a few drops and your beer will be wacky...](/img/2016/01/image-2048x1536-1.jpg)
+{% include image.html url="/img/2016/01/image-2048x1536-1.jpg" description="Crazy sour juice! Only a few drops and your beer will be wacky..." %}
 
 Of course, the best laid plans are always foiled by circumstance, and naturally the brew shop was out of the right bacteria or liquid yeast, so we had to improvise. Matt ended up acquiring some lactobacillus delbrueckii for the souring (As you can probably guess by the name, it will introduce a hell of a lot of lactic acid). For the fermentation, Matt picked up a general Belgian ale mix, which should introduce some interesting flavours to add to the sourness from the Bacteria.
 
@@ -25,7 +25,7 @@ We boiled for 1 hour in total, and the aim was to have about 8L. That’ll leave
 In the end, we wound up with a bit extra, so we split the batch three ways, the third in an ordinary glass bottle, which only has a foil cover. We won’t dose this with any bacteria, but leave it to see what actually happens. The other two we are going to dose at different times, the first, after two days, the second, after a week. This should give us a bit of a range in terms of sourness. One will be pretty lethal, while the other will hopefully be mellow-ish (but not too mellow).
 
 
-![The three fermenters. I am tempted to leave an old sock over the small bottle, just to see what kind of funkiness we end up with...](/img/2016/01/image-4-copy.jpg)
+{% include image.html url="/img/2016/01/image-4-copy.jpg" description="The three fermenters. I am tempted to leave an old sock over the small bottle, just to see what kind of funkiness we end up with..." %}
 
 The hope is this bad boy (for now, I’m going to call it ‘sour power’) will be ready a lot quicker than the mead. That said, it may well be one to leave in the cellar and wait two years, hoping that the time turns it delicious…
 

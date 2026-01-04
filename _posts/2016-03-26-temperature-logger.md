@@ -31,19 +31,19 @@ In the background behind the menu, the temperature is being logged and saved at 
 
 Most of the electronics (Arduino, RTC, SD module, level shifter, temperature probe connectors and power input) sit on a single breadboard ~50x90mm with the SD card module hanging off the edge. The 11 pin connector goes to the LCD and pushbuttons. Important to note on this are the filter caps (100uF) on the power rails and input, and the MOSFET/resistor level shifter for converting between 5V and 3V3 for the SD card.
 
-![Main board with RTC (left) arduino (centre) and SD card module (right). SPI level shifter circuit (5V <-> 3V3 for the SD card) is in the bottom right. Filter caps (100uF) at the input and on the 5V power rail are necessary to prevent noise which can lead to garbled LCD text and erratic operation.](/img/2016/03/img_20160326_094842.jpg)
+{% include image.html url="/img/2016/03/img_20160326_094842.jpg" description="Main board with RTC (left) arduino (centre) and SD card module (right). SPI level shifter circuit (5V <-> 3V3 for the SD card) is in the bottom right. Filter caps (100uF) at the input and on the 5V power rail are necessary to prevent noise which can lead to garbled LCD text and erratic operation." %}
 
 This board fits into the base of a 3D printed enclosure (see [this](/2016/03/20/designing-a-3d-printed-electronics-enclosure/) post for details). There is a slot for the SD card to be inserted and holes for mounting the DC power jack and temperature sensor connectors. The lid of the box holds the LCD and pushbuttons.
 
-![Main board mounted in the base of the enclosure ](/img/2016/03/img_20160326_102306-150x150.jpg)
-![LCD and pushbuttons mounted on the lid ](/img/2016/03/img_20160326_095011.jpg)
+{% include image.html url="/img/2016/03/img_20160326_102306-150x150.jpg" description="Main board mounted in the base of the enclosure " %}
+{% include image.html url="/img/2016/03/img_20160326_095011.jpg" description="LCD and pushbuttons mounted on the lid " %}
 
 And the completed enclosure!
 
-![](/img/2016/03/img_20160326_102847.jpg)
-![](/img/2016/03/img_20160326_102829.jpg)
-![](/img/2016/03/img_20160326_102834.jpg)
-![](/img/2016/03/img_20160326_102839.jpg)
+{% include image.html url="/img/2016/03/img_20160326_102847.jpg" description="" %}
+{% include image.html url="/img/2016/03/img_20160326_102829.jpg" description="" %}
+{% include image.html url="/img/2016/03/img_20160326_102834.jpg" description="" %}
+{% include image.html url="/img/2016/03/img_20160326_102839.jpg" description="" %}
 
 ## Code
 

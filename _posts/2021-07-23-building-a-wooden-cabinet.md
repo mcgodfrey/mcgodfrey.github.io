@@ -22,67 +22,67 @@ The body is composed of 2 frame and panel pieces on either side, with simple rai
 {% include image.html url="/img/2021/07/frame-1-1024x768.jpg" description="Cutting mortises in the frame legs" %}
 
 
-![](/img/2021/07/frame-2-1024x768.jpg)
+{% include image.html url="/img/2021/07/frame-2-1024x768.jpg" description="" %}
 
 Cutting the tenons
 
-![](/img/2021/07/frame-3-768x1024.jpg)
+{% include image.html url="/img/2021/07/frame-3-768x1024.jpg" description="" %}
 
 Rough cut tenon, needs to be cleaned up with a chisel
 
-![](/img/2021/07/frame-4-1024x768.jpg)
+{% include image.html url="/img/2021/07/frame-4-1024x768.jpg" description="" %}
 
 Test fitting
 
-![](/img/2021/07/frame-6-768x1024.jpg)
+{% include image.html url="/img/2021/07/frame-6-768x1024.jpg" description="" %}
 
 Cutting the groove for the side panel to fit in. I don't have a plough plane, so this was cut by hand with a chisel
 
-![](/img/2021/07/frame-7-768x1024.jpg)
+{% include image.html url="/img/2021/07/frame-7-768x1024.jpg" description="" %}
 
 Test fitting the panel into the frame (before the bevel was cut in the panel)
 
-![](/img/2021/07/frame-8-1024x768.jpg)
+{% include image.html url="/img/2021/07/frame-8-1024x768.jpg" description="" %}
 
 Panel tongue and bevel finished
 
-![](/img/2021/07/frame-9-1024x768.jpg)
+{% include image.html url="/img/2021/07/frame-9-1024x768.jpg" description="" %}
 
 Test fit
 
-![](/img/2021/07/base-1-1024x768.jpg)
+{% include image.html url="/img/2021/07/base-1-1024x768.jpg" description="" %}
 
 Laminating boards to make the base. All the pieces ready to assemble on the left
 
-![](/img/2021/07/frame-10-1024x768.jpg)
+{% include image.html url="/img/2021/07/frame-10-1024x768.jpg" description="" %}
 
 Glueing one of the side panels
 
-![](/img/2021/07/frame-11-768x1024.jpg)
+{% include image.html url="/img/2021/07/frame-11-768x1024.jpg" description="" %}
 
 Final glue-up of the 2 side panels with front and back rails
 
-![](/img/2021/07/base-2-1024x576.jpeg)
+{% include image.html url="/img/2021/07/base-2-1024x576.jpeg" description="" %}
 
 Base cut to size with cutouts at the back to fit around the rear legs
 
-![](/img/2021/07/base-4-1024x768.jpg)
+{% include image.html url="/img/2021/07/base-4-1024x768.jpg" description="" %}
 
 The base just sits on 4 rails underneath it on the frame. Since these will not be seen, they are just screwed in place
 
-![](/img/2021/07/top-attachment-1024x768.jpg)
+{% include image.html url="/img/2021/07/top-attachment-1024x768.jpg" description="" %}
 
 The top is attached with figure 8 clips recessed into the top of the frame so the top is flush with the top of the frame
 
-![](/img/2021/07/top-recessed-1024x768.jpg)
+{% include image.html url="/img/2021/07/top-recessed-1024x768.jpg" description="" %}
 
 Figure 8 clips recessed into the frame
 
-![](/img/2021/07/frame-12-768x1024.jpg)
+{% include image.html url="/img/2021/07/frame-12-768x1024.jpg" description="" %}
 
 Finished with boiled inseed oil, and test fitting the top (top laminated and cut to size, but not bevelled yet)
 
-![](/img/2021/07/top-corner-1024x768.jpg)
+{% include image.html url="/img/2021/07/top-corner-1024x768.jpg" description="" %}
 
 The top is made of 5 90mm x 19mm boards laminated together. Once glued, the edges were bevelled to match the styling on the panels
 
@@ -93,86 +93,86 @@ The drawer is flush mounted with the front of the frame, with half-blind dovetai
 
 ### Sides
 
-![](/img/2021/07/drawer-side-recess-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-side-recess-1024x768.jpg" description="" %}
 
 Cut a rebate on the inside of the drawer sides
 
-![](/img/2021/07/drawer-cutting-dovetails-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-cutting-dovetails-1024x768.jpg" description="" %}
 
 Mark and cut the dovetails on the sides
 
-![](/img/2021/07/drawer-cutting-dovetails-2-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-cutting-dovetails-2-1024x768.jpg" description="" %}
 
 Chisel out the waste, alternating between chopping down, and removing the waste
 
-![](/img/2021/07/drawer-cutting-dovetails-3-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-cutting-dovetails-3-1024x768.jpg" description="" %}
 
 Chisel out the waste
 
-![](/img/2021/07/drawer-cutting-dovetails-4-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-cutting-dovetails-4-1024x768.jpg" description="" %}
 
 Completed dovetails
 
 ### Front
 
-![](/img/2021/07/drawer-transfer-dovetails-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-transfer-dovetails-1024x768.jpg" description="" %}
 
 Transfer dovetail sizes to the front
 
-![](/img/2021/07/drawer-transfer-dovetails-2-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-transfer-dovetails-2-1024x768.jpg" description="" %}
 Pins marked on the front panel
 
-![](/img/2021/07/drawer-transfer-dovetails-3-1024x768.jpg)Cut the pins at a 45 degree angle to avoid cutting through the front
+{% include image.html url="/img/2021/07/drawer-transfer-dovetails-3-1024x768.jpg" description="" %}Cut the pins at a 45 degree angle to avoid cutting through the front
 
-![](/img/2021/07/drawer-transfer-dovetails-4-768x1024.jpg)Chisel out the waste
+{% include image.html url="/img/2021/07/drawer-transfer-dovetails-4-768x1024.jpg" description="" %}Chisel out the waste
 
-![](/img/2021/07/drawer-transfer-dovetails-5-1024x768.jpg)Completed pins
+{% include image.html url="/img/2021/07/drawer-transfer-dovetails-5-1024x768.jpg" description="" %}Completed pins
 
-![](/img/2021/07/drawer-transfer-dovetails-6-1024x768.jpg)Test fit
+{% include image.html url="/img/2021/07/drawer-transfer-dovetails-6-1024x768.jpg" description="" %}Test fit
 
 ### Back
 
-![](/img/2021/07/drawer-cutting-recess-768x1024.jpg)
+{% include image.html url="/img/2021/07/drawer-cutting-recess-768x1024.jpg" description="" %}
 
 Cutting a recess for the base to sit in. I don't have a plough plane, so this was done by hand with a chisel
 
-![](/img/2021/07/drawer-cutting-dado-768x1024.jpg)
+{% include image.html url="/img/2021/07/drawer-cutting-dado-768x1024.jpg" description="" %}
 
 Cutting the dado
 
-![](/img/2021/07/drawer-cutting-dado-2-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-cutting-dado-2-1024x768.jpg" description="" %}
 
 Test fit dado
 
-![](/img/2021/07/drawer-back-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-back-1024x768.jpg" description="" %}
 
 Dado complete and base fitted. The grain of the base runs side so side so expansion occurs front to back
 
-![](/img/2021/07/drawer-base-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-base-1024x768.jpg" description="" %}
 
 The base is not glued and only attached with 3 screws at the back, with elongated holes to allow for wood movement.
 
-![](/img/2021/07/drawer-complete-1-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-complete-1-1024x768.jpg" description="" %}
 
 Completed drawer
 
 ### Fitting the drawer
 
-![](/img/2021/07/drawer-fitting-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-fitting-1024x768.jpg" description="" %}
 
 I made a simple frame for the drawer to slide on and attached it to the inside of the base
 
-![](/img/2021/07/drawer-fitting-2-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-fitting-2-1024x768.jpg" description="" %}
 
 It will not be seen, so it is screwed and glued
 
-![](/img/2021/07/drawer-fitting-3-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-fitting-3-1024x768.jpg" description="" %}
 
-![](/img/2021/07/drawer-fitting-4-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-fitting-4-1024x768.jpg" description="" %}
 
 Flush fit drawer front
 
-![](/img/2021/07/drawer-fitting-5-1024x768.jpg)
+{% include image.html url="/img/2021/07/drawer-fitting-5-1024x768.jpg" description="" %}
 
 Fitted drawer
 
@@ -181,23 +181,23 @@ Fitted drawer
 
 The door on the lower shelf is a frame and panel design, similar to the side panels except that the frame is made of tasmanian oak to match the top and drawer front, and the panel is pine for contrast. The frame is mortise/tenon again, and the panel is tongue/groove with a bevel on the front. In this case, I don't want the panel to protrude from the frame, so I had to plane off the front of the panel until it was flush with the frame.
 
-![](/img/2021/07/door-mortises-1024x768.jpg)
+{% include image.html url="/img/2021/07/door-mortises-1024x768.jpg" description="" %}
 
 Door stile mortises
 
-![](/img/2021/07/door-panel-bevel-1024x768.jpg)
+{% include image.html url="/img/2021/07/door-panel-bevel-1024x768.jpg" description="" %}
 
 Planing the bevel on the door panel
 
-![](/img/2021/07/door-exploded-1024x768.jpg)
+{% include image.html url="/img/2021/07/door-exploded-1024x768.jpg" description="" %}
 
 Door components cut and test fitted, ready to glue
 
-![](/img/2021/07/door-glue-up-1024x768.jpg)
+{% include image.html url="/img/2021/07/door-glue-up-1024x768.jpg" description="" %}
 
 Glueing the door
 
-![](/img/2021/07/door-glue-up-2-1024x768.jpg)
+{% include image.html url="/img/2021/07/door-glue-up-2-1024x768.jpg" description="" %}
 
 Clamping the door while the glue dries
 
@@ -208,4 +208,4 @@ With the door complete, it was attached with some brass flush mount hinges and t
 
 Overall, I am quite happy with how it has turned out. I particularly like the look of the tasmanian oak with boiled linseed oil. It changes colour depending on the angle of the light, as can be seen in the picture below, sometimes very light almost like the pine, sometimes dark reddish brown and sometimes a slightly pink colour. Time will tell how well the joinery holds up over the years, which is the real test of the work.
 
-![finished](/img/2021/07/finished-1-1024x768.jpg)
+{% include image.html url="/img/2021/07/finished-1-1024x768.jpg" description="finished" %}

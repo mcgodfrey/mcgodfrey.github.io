@@ -13,7 +13,7 @@ In this post I'll go over my steps to get an STM32F4xx microcontroller running F
 
 This post will focus on the SPI setup and configuration steps using STM32CubeMX, rather than the whole system design and communication protocol (that will be a future post). The final application will have a raspberry pi controller talking over as shared SPI bus to a number of STM32F412 devices, each running FreeRTOS. For the purposes of this post however, I will use a raspberry pi connected to a single STM32F4 discovery board (which has an STM32F407 MCU on it, which for the purposes of this post behaves identically).
 
-![Raspberry pi to STM32F4 discovery board test setup. Note the 4-wires forming the SPI bus between the two (plus a ground wire which is not strictly necessary because the USB connected to both forms a ground reference already)](/img/2020/11/stm32f4-spi-device-setup-1024x651.jpg)
+{% include image.html url="/img/2020/11/stm32f4-spi-device-setup-1024x651.jpg" description="Raspberry pi to STM32F4 discovery board test setup. Note the 4-wires forming the SPI bus between the two (plus a ground wire which is not strictly necessary because the USB connected to both forms a ground reference already)" %}
 
 I will be using STM32CubeMX to generate the code for the startup and system initialisation, as well as the HAL for the GPIO and the SPI/DMA peripherals. This tool actually seems to work reasonably well, especially for getting a project up and running quickly without having to read through all the documentation to even get the thing to start. It may not be optimised, but it is a decent starting point. The code it generates is scattered with start/end user code comment blocks. If you are careful put all of your own user code between these blocks, then you can freely go back and update the project in CubeMX and re-generate the outputs and it will keep all of your code, which makes it easy to change peripheral configurations and test the results.
 
@@ -59,7 +59,7 @@ Start by creating a new project using the MCU selector - search for and choose t
     - Click on any pins you would like to use as outputs (LED indicator for example) and select `GPIO_Output`. I set up the 4 user LEDs on teh discovery board (PD12-PD15)
     - Under System Core -&gt; GPIO select the pin and change the "User Label" to something useful, eg. `LED_GREEN`.
 
-![Final CubeMX setup with SPI and interrupts set up, plus 4 LED outputs defined.](/img/2020/11/CubeMX-screen-3-1024x490.png)
+{% include image.html url="/img/2020/11/CubeMX-screen-3-1024x490.png" description="Final CubeMX setup with SPI and interrupts set up, plus 4 LED outputs defined." %}
 
 ### Clock configuration tab
 
